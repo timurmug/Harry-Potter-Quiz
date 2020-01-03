@@ -12,5 +12,7 @@ Fan-app about Harry Potter world
 After passing each test appear information about results. Different phrases appear and images depending on the percentage of correctness of the test.
 ######
 You can also turn off the vibration or music in the main screen.
+######
+The application implements various types of animation for smooth operation
 
 ![HPpreview](https://user-images.githubusercontent.com/51258482/71713657-afffe800-2e1b-11ea-84ff-730863b0d9f4.png)
