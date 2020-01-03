@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.iOS", "Quiz\Quiz.iOS\Q
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.UWP", "Quiz\Quiz.UWP\Quiz.UWP.csproj", "{F8026D92-C362-49D8-87D8-747742BAC9A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz", "Quiz\Quiz\Quiz.csproj", "{EBCBB058-29FA-4C33-95EA-94DB15192365}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quiz", "Quiz\Quiz\Quiz.csproj", "{EBCBB058-29FA-4C33-95EA-94DB15192365}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

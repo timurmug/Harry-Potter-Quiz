@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:customelements="clr-namespace:Quiz.CustomElements"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="Quiz.PopUps.Instructions6test">
+    
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="400"
+                                   DurationOut="300"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Top"
+                                   PositionOut="Top" 
+                                  />
+    </pages:PopupPage.Animation>
+
+    <customelements:CustomFrame VerticalOptions="StartAndExpand" BackgroundColor="#5c5c5c" 
+                                Padding="15" CornerRadius="0,0,20,20">
+        <customelements:CustomFrame.Content>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="5,0,5,0">
+                <Label x:Name="phraseLabel" TextColor="#e1d6d4" VerticalOptions="CenterAndExpand" 
+                           Text="Смахните вверх, если приведенное ниже предложение верное, иначе - смахните вниз"
+                           FontSize="Medium" FontFamily="18167.ttf#EFN Pastele"></Label>
+                <Image x:Name="image" HeightRequest="125" WidthRequest="70"/>
+            </StackLayout>
+        </customelements:CustomFrame.Content>
+    </customelements:CustomFrame>
+
+</pages:PopupPage>

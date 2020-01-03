@@ -2,13 +2,95 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Quiz"
-             x:Class="Quiz.MainPage">
+             x:Class="Quiz.MainPage"
+             BackgroundColor="Black"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="SandyBrown" />
+                <Setter Property="BorderRadius" Value="10" />
+            </Style>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="SandyBrown" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="Margin" Value="0,5,0,0"/>
+                <Setter Property="FontFamily" Value="10467.ttf#Harry Potter (Russian Version of Gfdtk)"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout VerticalOptions="CenterAndExpand" Margin="15,20,15,0" Spacing="40">
+         <Grid RowSpacing="35">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0" Grid.Row="0">
+                <Image Source="FirstmenuIcon.png" WidthRequest="100" HeightRequest="100"></Image>
+                <Label Text="Первый тест" Style="{StaticResource labelStyle}"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Start_Clicked"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Grid.Row="0">
+                <Image Source="SecondmenuIcon.png" WidthRequest="100" HeightRequest="100"></Image>
+                <Label Text="Второй тест" Style="{StaticResource labelStyle}"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Start2_Clicked"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="1">
+                <Image Source="ThirdmenuIcon.png" WidthRequest="100" HeightRequest="100"></Image>
+                <Label Text="Третий тест" Style="{StaticResource labelStyle}"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Start3_Clicked"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Grid.Row="1">
+                <Image Source="FourthmenuIcon.png" WidthRequest="100" HeightRequest="100"></Image>
+                <Label Text="Четвертый тест" Style="{StaticResource labelStyle}"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Start4_Clicked"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="2">
+                <Image Source="FifthmenuIcon.png" WidthRequest="100" HeightRequest="100"></Image>
+                <Label Text="Пятый тест" Style="{StaticResource labelStyle}"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Start5_Clicked"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Grid.Row="2">
+                <Image Source="SixthmenuIcon.png" WidthRequest="100" HeightRequest="100"></Image>
+                <Label Text="Шестой тест" Style="{StaticResource labelStyle}"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Start6_Clicked"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Grid>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Spacing="15">
+            <Image WidthRequest="20" HeightRequest="20" x:Name="musicImage">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Music_Tapped"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image WidthRequest="20" HeightRequest="20" x:Name="vibrationImage">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Vibration_Tapped"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

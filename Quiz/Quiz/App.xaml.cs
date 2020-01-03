@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Settings;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,11 +8,13 @@ namespace Quiz
 {
     public partial class App : Application
     {
+        public static bool IsVibrationOn = CrossSettings.Current.GetValueOrDefault("IsVibrationOn", true);
+        public static bool IsMusicOn = CrossSettings.Current.GetValueOrDefault("IsMusicOn", true);
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
