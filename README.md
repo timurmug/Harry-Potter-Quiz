@@ -1,7 +1,7 @@
 # Harry-Potter-Quiz
 Fan-app about Harry Potter world
 
-*Works only on android*
+*Works only on Android*
 
 #### The application contains six tests:
 1) the simplest, where you just need to choose the answer
